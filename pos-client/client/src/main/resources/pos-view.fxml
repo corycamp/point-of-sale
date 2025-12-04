@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.pos.client.controllers.PosController">
+
+    <HBox spacing="10">
+        <TextField fx:id="skuInput" promptText="Enter SKU"/>
+        <Button text="Lookup" onAction="#onLookupProduct"/>
+    </HBox>
+
+    <TableView fx:id="cartTable">
+        <columns>
+            <TableColumn text="Product" fx:id="colName"/>
+            <TableColumn text="Product" fx:id="colQty"/>
+            <TableColumn text="Product" fx:id="colPrice"/>
+        </columns>
+    </TableView>
+
+    <Button text="Checkout" onAction="#onCheckout"/>
+</VBox>
