@@ -16,10 +16,11 @@
     <TableView fx:id="cartTable">
         <columns>
             <TableColumn text="Product" fx:id="colName"/>
-            <TableColumn text="Product" fx:id="colQty"/>
-            <TableColumn text="Product" fx:id="colPrice"/>
+            <TableColumn text="Quantity" fx:id="colQty"/>
+            <TableColumn text="Price" fx:id="colPrice"/>
         </columns>
     </TableView>
 
     <Button text="Checkout" onAction="#onCheckout"/>
+    <Button text="Manage Devices" onAction="#openDeviceManager"/>
 </VBox>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="com.pos.client.controllers.DeviceManagerController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <center>
+        <TableView fx:id="deviceTable">
+            <columns>
+                <TableColumn fx:id="colName" text="Name" prefWidth="200"/>
+                <TableColumn fx:id="colType" text="Type" prefWidth="100"/>
+                <TableColumn fx:id="colIdentifier" text="Identifier" prefWidth="200"/>
+                <TableColumn fx:id="colConnected" text="Connected" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Button fx:id="btnScan" text="Scan" onAction="#scanDevices"/>
+            <Button fx:id="btnConnect" text="Connect" onAction="#connectToDevice"/>
+            <Button fx:id="btnDisconnect" text="Disconnect" onAction="#disconnectDevice"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
